@@ -1,3 +1,5 @@
+https://dev.d3g0csfacnt604.amplifyapp.com/
+
 # Github Top Issues
 
 This utility allows you to see the top issues (as measured by # of interactions, priority labels, and age) in any Github repository's issue tracker.
@@ -9,12 +11,15 @@ https://mlabieniec.github.io/top-issues/#!aws-amplify/amplify-js
 ```
 
 To view the top issues for another repository, replace the repository name in the URL (everything after the `#!`).
+
 ```
 https://mlabieniec.github.io/top-issues/#!OWNER/REPOSITORY
 ```
+
 ## Rate Limiting
 
 Github API requests are rate limited by IP address. You can raise the rate limit by using a [personal Github access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/). To link a use an access token, append `github_username` and `github_access_token` parameters to the URL.
+
 ```
 https://mlabieniec.github.io/top-issues/?github_username=USERNAME&github_access_token=ACCESS_TOKEN#!aws-amplify/amplify-js
 ```
@@ -22,6 +27,7 @@ https://mlabieniec.github.io/top-issues/?github_username=USERNAME&github_access_
 ## Private Repos
 
 To use this tool with a private repo, append `github_username` and `github_access_token` parameters to the URL.
+
 ```
 https://mlabieniec.github.io/top-issues/?github_username=USERNAME&github_access_token=ACCESS_TOKEN#!secret-agent/top-secret-stuff
 ```
@@ -47,6 +53,6 @@ You can specify custom scoring settings for your repositry by creating a `.topis
 }
 ```
 
-The properties in the `labels` object assign a scores to labels. You may add as many labels as you like. You may use negative scores if you like. You do not need to assign a score to every label in your project. Because only repository collaborators may add labels, these scores represent the will of the collaborators. 
+The properties in the `labels` object assign a scores to labels. You may add as many labels as you like. You may use negative scores if you like. You do not need to assign a score to every label in your project. Because only repository collaborators may add labels, these scores represent the will of the collaborators.
 
 The properties in the `reactions` object assign scores to [Github reactions](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Only reactions on the initial issue comment "count." Because anyone may add reactions, these scores represent the will of the community.
